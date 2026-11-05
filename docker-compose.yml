@@ -1,0 +1,17 @@
+services:
+  fake-gcs:
+    image: fsouza/fake-gcs-server:latest
+    container_name: fake-gcs-server
+    command:
+      - "-scheme"
+      - "http"
+      - "-backend"
+      - "filesystem"
+      - "-filesystem-root"
+      - "/data"
+    ports:
+      - "4443:4443"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    

@@ -1,0 +1,26 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Fichiers de variables pouvant contenir des secrets
+*.tfvars
+*.tfvars.json
+
+# Clés et identifiants
+*.pem
+*.key
+credentials.json
+service-account.json
+
+# Données locales de Fake GCS
+data/
+
+# Système et éditeurs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
