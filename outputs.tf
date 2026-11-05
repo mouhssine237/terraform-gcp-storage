@@ -1,14 +1,14 @@
 output "bucket_name" {
   description = "Nom du bucket créé"
-  value       = google_storage_bucket.project_bucket.name
+  value       = module.storage_bucket.bucket_name
 }
 
 output "bucket_location" {
-  description = "Région du bucket"
-  value       = google_storage_bucket.project_bucket.location
+  description = "Localisation du bucket"
+  value       = module.storage_bucket.bucket_location
 }
 
 output "bucket_url" {
   description = "URL Google Storage du bucket"
-  value       = google_storage_bucket.project_bucket.url
+  value       = module.storage_bucket.bucket_url
 }
